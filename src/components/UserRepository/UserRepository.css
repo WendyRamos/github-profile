@@ -1,0 +1,146 @@
+.container-repository {
+    display: grid;
+    grid-template-rows: "container-user" "container-repos";
+}
+
+.container-user {
+    width: 100%;
+}
+.profile-data {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    justify-content: start;
+}
+
+.avatar {
+    width: 120px;
+    padding: 8px;
+    background-color: #20293A;
+    border-radius: 10px;
+    justify-content: start;
+    align-items: start;
+}
+
+.img-avatar {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.data-user {
+    display: flex;
+    flex-direction: row; 
+    align-items: end;
+}
+
+.data-user div {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin: 10px;
+    padding: 9px 20px;
+    background-color: #111729;
+    border-radius: 15px;
+    color: #4A5567;
+    font-size: 14px;
+}
+
+.data-user div h4 {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.data-user div p {
+    margin-left: 20px;
+    padding-left: 20px;
+    color: #CDD5E0;
+    border-left: 2px solid #4A5567;
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    margin: 30px 0;
+}
+
+.section .biography h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.section .biography p {
+    margin: 10px 0 40px 0;
+    color: #97A3B6;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.container-repos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+.container-repos a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.repo {
+    width: 100%;
+    align-self: start;
+    padding: 20px;
+    background: linear-gradient(to right, #111729, #1D1B48 100%, #3662E3 1000%);
+    border-radius: 15px;
+}
+.name-repo {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.description-repo {
+    font-size: 14px;
+    color: #97A3B6;
+    margin-bottom: 10px;
+}
+.data-repo {
+    display: flex;
+    flex-direction: row;
+    color: #97A3B6;
+    align-items: center;
+}
+.data-repo div {
+    margin: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.data-repo img {
+    margin-right: 5px;
+}
+.data-repo div p {
+    font-size: 12px;
+}
+.view-repos {
+    grid-column: span 2;
+    background-color: transparent;
+    border: none;
+    color: #97A3B6;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .data-user {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media screen and (max-width: 750px) {
+    .container-repos {
+        grid-template-columns: 1fr;
+    }
+    .view-repos {
+        grid-column: 1/1;
+    }
+}
